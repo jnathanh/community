@@ -1,0 +1,25 @@
+<div id="home-page-container">
+	<div class="location-search" ng-controller="LocationSearchCtrl">
+		<div class="input-group">
+		  <span class="input-group-addon" id="zip-code-search">Postal Code</span>
+		  <input type="search" class="form-control" placeholder="put your postal code here" ng-model="zip" ng-change="typeAction()" autofocus>
+		</div>
+		<div class="location-results">
+			<div ng-repeat="result in results" class="location-result">
+<!--accuracy: null -->
+<!--admin_code1: "AA"-->
+<!--admin_code2: "029"-->
+<!--admin_code3: null-->
+<!--admin_name1: null-->
+<!--admin_name2: "Erie"-->
+<!--admin_name3: null-->
+<!--country_code: "US"-->
+<!--latitude: "41.0375"-->
+<!--longitude: "-111.6789"-->
+<!--place_name: "FPO"-->
+<!--postal_code: "34050"-->
+				{{result.postal_code}} - ({{result.place_name}}, {{result.admin_name1}})
+			</div>
+		</div>
+	</div>
+</div>
